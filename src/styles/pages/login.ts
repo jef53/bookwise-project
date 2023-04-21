@@ -28,3 +28,13 @@ export const WelcomeSection = styled('section', {
   justifyContent: 'center',
   paddingLeft: 20,
 })
+
+export const AuthButtons = styled('section', {
+  width: '100%',
+  maxWidth: 372,
+  margin: '0 auto',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  paddingLeft: 20,
+})
