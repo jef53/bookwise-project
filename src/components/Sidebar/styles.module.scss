@@ -61,14 +61,24 @@
 
 .loginAndLogout {
   border: none;
+  font-size: 0.9rem;
   border-radius: 10px;
   display: flex;
   align-items: center;
-  padding: 10px;
-  color: white;
+  padding: 0;
+  margin: 10px;
+  color: rgb(214, 214, 214);
   cursor: pointer;
   img {
-    margin-left: 9px;
+    margin: 0 10px;
+    width: 30px;
+    border: none;
+    border-radius: 50%;
+    border: 2px solid rgba(64, 160, 224, 0.74);
+  }
+
+  .sessionIcon {
+    border: none;
   }
 }
 
