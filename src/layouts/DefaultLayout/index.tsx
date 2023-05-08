@@ -3,6 +3,7 @@ import Head from "next/head"
 import { ReactNode } from "react"
 import { MainContainer, Content } from "./styles"
 
+
 type DefaultLayoutProps = {
   children: ReactNode,
   title: string,
