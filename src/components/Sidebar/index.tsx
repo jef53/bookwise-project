@@ -16,8 +16,8 @@ export const Sidebar = () => {
       <div className={styles.block}>
         <img src="/images/logo.svg" alt="logo" className={styles.logo} />
         <Link href='/' className={router.pathname === '/' ? styles.activeLink : ""}><ChartLineUp size={24} /><p>Início</p></Link>
-        <Link href='/'><Binoculars size={24} />Explorar</Link>
-        <Link href='/'><User size={24} /> Perfil</Link>
+        <Link href='/explore' className={router.pathname === '/explore' ? styles.activeLink : ""}> <Binoculars size={24} /><p>Explorar</p></Link>
+        <Link href='/profile' className={router.pathname === '/profile' ? styles.activeLink : ""}><User size={24} /> Perfil</Link>
       </div>
 
       {user ?

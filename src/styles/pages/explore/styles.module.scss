@@ -1,0 +1,31 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.navBar {
+  width: 100%;
+  margin: 20px 0 40px 0;
+}
+
+.navBar span {
+  margin: 0 5px;
+  padding: 5px 9px;
+  font-size: 0.75rem;
+  border: #8381d9 1px solid;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.onActive {
+  background-color: #2a2879;
+  color: #f8f9fc;
+  transition: 0.1s;
+}
+
+.inactive {
+  background: none;
+  color: #8381d9;
+}
