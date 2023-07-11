@@ -21,7 +21,7 @@ export const Sidebar = () => {
       </div>
 
       {user ?
-        (<div onClick={() => { signOut() }} className={styles.loginAndLogout}><img src={user?.avatar_url} />{user?.name}<img className={styles.sessionIcon} src='/images/sidebar/logout.svg' /></div>)
+        (<div onClick={() => { signOut() }} className={styles.loginAndLogout}><img src={user?.avatar_url} referrerPolicy="no-referrer" />{user?.name}<img className={styles.sessionIcon} src='/images/sidebar/logout.svg' /></div>)
         : (<div onClick={() => { router.push('/login') }} className={styles.loginAndLogout}>Fazer login  <img src='/images/sidebar/login.svg' className={styles.sessionIcon} /></div>)}
 
     </div>

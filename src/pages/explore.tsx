@@ -12,11 +12,12 @@ import { useState } from "react";
 
 export type BookWithAvgRating = Book & {
   avgRating: number,
-  alreadyRead: boolean,
+  alreadyRead?: boolean,
 }
 
 const ExplorePage: NextPageWithLayout = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
+  const [search, setSearch] = useState('')
 
   const { data: categories } = useQuery<Category[]>(["categories"], async () => {
     const { data } = await api.get("/books/categories")
@@ -32,11 +33,13 @@ const ExplorePage: NextPageWithLayout = () => {
     return data?.books ?? [];
   })
 
+  const filteredBooks = books?.filter(book => book.name.toLowerCase().includes(search.toLowerCase()) || book.author.toLowerCase().includes(search.toLowerCase()))
+
   return (
     <>
       <div className={styles.header}>
         <PageTitle icon={<Binoculars />} title="Explorar" />
-        <Input placeholder="Buscar livro ou autor" icon={<MagnifyingGlass />} />
+        <Input className={styles.headerInput} onChange={({ target }) => { setSearch(target.value); setSelectedCategory(null) }} value={search} placeholder="Buscar livro ou autor" icon={<MagnifyingGlass />} />
       </div>
 
 
@@ -44,7 +47,9 @@ const ExplorePage: NextPageWithLayout = () => {
         <span className={null === selectedCategory ? styles.onActive : styles.inactive} onClick={() => setSelectedCategory(null)}>Tudo</span>
         {categories?.map(category =>
           <span key={category.id}
-            onClick={() => setSelectedCategory(category.id)}
+            onClick={() => { setSelectedCategory(category.id); setSearch('') }}
+
+
             className={category.id === selectedCategory ? styles.onActive : styles.inactive}
           >
 
@@ -55,7 +60,7 @@ const ExplorePage: NextPageWithLayout = () => {
 
       </nav>
 
-      <BookList books={books} />
+      <BookList books={filteredBooks} />
 
 
     </>

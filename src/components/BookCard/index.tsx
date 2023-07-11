@@ -1,16 +1,23 @@
+import { BookWithAvgRating } from "@/pages/explore"
+import { RatingStars } from "../RatingStars"
 import styles from "./styles.module.scss"
 
-export const BookCard = () => {
+interface BookProps {
+  book: BookWithAvgRating,
+}
+
+export const BookCard = ({ book }: BookProps) => {
   return (
     <div className={styles.main}>
       <div className={styles.bookMain}>
-        <img src="/images/card/book.svg" alt="livro2" />
-        <div>
-          <div>
-            <h2>A revolução dos bichos</h2>
-            <h3>George Orwell</h3>
+        <img src={book.cover_url} alt="livro2" />
+        <div className={styles.bookInfo}>
+          <h2>{book.name}</h2>
+          <h3>{book.author}</h3>
+
+          <div className={styles.rating}>
+            <RatingStars rating={book.avgRating} />
           </div>
-          <img src="/images/card/rating.svg" alt="rating" />
         </div>
       </div>
     </div>

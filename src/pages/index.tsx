@@ -13,7 +13,7 @@ const HomePage: NextPageWithLayout = () => {
   const { data } = useSession()
   return (
     <div className={styles.bg}>
-      <div >
+      <div className={styles.main}>
         <PageTitle icon={<ChartLineUp />} title="Início" />
         <LastReading />
         <LatestRatings />

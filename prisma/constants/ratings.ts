@@ -11,14 +11,14 @@ export const ratings = [
   },
   {
     id: uuidv4(),
-    rate: 4,
+    rate: 2,
     description: 'Nec tempor nunc in egestas.',
     book_id: '86596503-369b-4614-bacf-11c9bb73e779',
     user_id: 'c296c6c0-5c59-40dd-aa8a-ef2b015b7502',
   },
   {
     id: uuidv4(),
-    rate: 5,
+    rate: 3,
     description:
       'Semper et sapien proin vitae nisi. Feugiat neque integer donec et aenean posuere amet ultrices. Cras fermentum id pulvinar varius leo a in. Amet libero pharetra nunc elementum fringilla velit ipsum. Sed vulputate massa velit nibh',
     book_id: 'e688c24f-d14d-4607-a12e-90e6e367398d',
@@ -57,14 +57,14 @@ export const ratings = [
   },
   {
     id: uuidv4(),
-    rate: 4,
+    rate: 3,
     description: 'Nec tempor nunc in egestas.',
     book_id: '0440ad7d-230e-4573-b455-84ca38b5d339',
     user_id: 'c296c6c0-5c59-40dd-aa8a-ef2b015b7502',
   },
   {
     id: uuidv4(),
-    rate: 5,
+    rate: 1,
     description:
       'Semper et sapien proin vitae nisi. Feugiat neque integer donec et aenean posuere amet ultrices. Cras fermentum id pulvinar varius leo a in. Amet libero pharetra nunc elementum fringilla velit ipsum. Sed vulputate massa velit nibh',
     book_id: '14f410df-b28a-4e72-b1b4-363e26e160dd',
@@ -72,7 +72,7 @@ export const ratings = [
   },
   {
     id: uuidv4(),
-    rate: 4,
+    rate: 2,
     description:
       'Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget',
     book_id: 'd2870ad0-3312-4ac2-af9f-76af6565587d',
@@ -87,7 +87,7 @@ export const ratings = [
   },
   {
     id: uuidv4(),
-    rate: 5,
+    rate: 3,
     description:
       'Semper et sapien proin vitae nisi. Feugiat neque integer donec et aenean posuere amet ultrices. Cras fermentum id pulvinar varius leo a in. Amet libero pharetra nunc elementum fringilla velit ipsum. Sed vulputate massa velit nibh',
     book_id: '6de9f6b8-5ff4-4e06-b9f4-843eca462803',
@@ -103,7 +103,7 @@ export const ratings = [
   },
   {
     id: uuidv4(),
-    rate: 4,
+    rate: 2,
     description: 'Nec tempor nunc in egestas.',
     book_id: '1d5cdbdc-b90f-40d5-8fe9-d4923ae12dbd',
     user_id: 'c296c6c0-5c59-40dd-aa8a-ef2b015b7502',

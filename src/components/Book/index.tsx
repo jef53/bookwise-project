@@ -1,4 +1,6 @@
 import { BookWithAvgRating } from "@/pages/explore"
+import { RatingsDialog } from "../RatingsDialog"
+import { RatingStars } from "../RatingStars"
 import styles from "./styles.module.scss"
 
 export interface BookProps {
@@ -7,17 +9,25 @@ export interface BookProps {
 
 export const Book = ({ book }: BookProps) => {
   return (
-    <div className={styles.main}>
-      <div className={styles.bookMain}>
-        <img src={book.cover_url} alt="livro2" />
-        <div>
-          <div>
+    <RatingsDialog>
+      <div className={styles.main}>
+        {book.alreadyRead && <div className={styles.read}>LIDO</div>}
+        <div className={styles.bookMain}>
+          <img src={book.cover_url} alt="livro2" />
+
+          <div className={styles.bookInfo}>
             <h2>{book.name}</h2>
             <h3>{book.author}</h3>
+            <div className={styles.rating}>
+              <RatingStars rating={book.avgRating} />
+            </div>
           </div>
-          <img src="/images/card/rating.svg" alt="rating" />
+
+
+
         </div>
+
       </div>
-    </div>
+    </RatingsDialog>
   )
 }

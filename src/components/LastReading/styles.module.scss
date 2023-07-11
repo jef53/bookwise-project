@@ -1,33 +1,51 @@
 .main {
   width: 600px;
   margin: 0 0 30px 0;
-  h1 {
-    font-size: 0.85rem;
+}
+
+.header {
+  display: flex;
+  margin: 0 0 20px 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    font-size: 0.8rem;
     font-weight: 300;
-    margin-bottom: 15px;
   }
+
+  span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #8381d9;
+    cursor: pointer;
+  }
+}
+
+.inside {
+  display: flex;
+  flex-direction: column;
 }
 
 .dateAndRating {
   display: flex;
+  width: 100%;
   flex-direction: row;
-  justify-content: center;
-
   margin-bottom: 8px;
 
   h3 {
     font-size: 0.7rem;
     font-weight: 100;
     color: #8d95af;
-    margin-right: auto;
     margin-top: 5px;
   }
 
-  img {
+  .rating {
+    display: flex;
+    flex-direction: row;
     margin-left: auto;
-    margin-top: -20px;
-    padding: 0;
-    justify-content: flex-end;
+    padding-bottom: 10px;
   }
 }
 
@@ -37,50 +55,40 @@
   border-radius: 5px;
   display: flex;
   flex-direction: row;
-
   background-color: #252d4a;
   padding: 15px;
 
   .bookPic {
     width: 150px;
+    height: 100%;
     margin-right: 15px;
   }
+}
 
-  div {
-    display: flex;
-    flex-direction: column;
+.bookInfo {
+  display: flex;
+  flex-direction: column;
 
-    div {
-      display: flex;
-      flex-direction: column;
-    }
-    h2 {
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: #f8f9fc;
-    }
+  h2 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #f8f9fc;
+  }
 
-    h3 {
-      font-size: 0.8rem;
-      font-weight: 300;
-      color: #8d95af;
-    }
+  h3 {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: #8d95af;
+  }
 
-    p {
-      margin-top: 35px;
-      font-size: 0.75rem;
-      line-height: 20px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
+  p {
+    margin-top: 35px;
+    font-size: 0.75rem;
+    line-height: 20px;
+  }
 
-      -webkit-line-clamp: 2; /* number of lines to show */
-      -webkit-box-orient: vertical;
-    }
-
-    img {
-      padding-bottom: 7px;
-      width: 100px;
-    }
+  img {
+    padding-bottom: 7px;
+    width: 100px;
   }
 }
